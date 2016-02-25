@@ -1,0 +1,1 @@
+var rnd=function(d,e){return"undefined"==typeof e&&(e=d,d=0),d+Math.floor(Math.random()*(e-d))};module.exports=function(d,e){for(var n,t=d.query,r=(t.depth,t.parentId,{code:200,msg:"",data:[]}),a=0,o=rnd(3,10);o>a;a++)n={deptId:[a].join("00"),deptName:"部门_"+a},r.data.push(n);e.send(r)};

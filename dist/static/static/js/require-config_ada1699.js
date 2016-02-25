@@ -1,0 +1,1 @@
+require.onError=function(r){throw r};

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test</title>
+
+    <link rel="stylesheet" type="text/css" href="/static/component/regularui/Dialog/index_74d925b.css" />
+</head>
+<body>
+<script src="/static/pkg/test/local/ajax/index.html_aio_718f439.js"></script>
+<script>
+    require(['component/BaseComponent/index'], function (BaseComponent) {
+        var App = BaseComponent.extend({
+            init: function () {
+                this.$request({
+                    url:'/testurl',
+                    method: 'GET',
+                    success: function (result) {
+                        console.log(result.code,result.msg);
+                    },
+                    error: function (xhr,msg) {
+                        console.log(xhr, msg);
+                    }
+                })
+            }
+        })
+
+        new App();
+    })
+</script>
+</body>
+</html>

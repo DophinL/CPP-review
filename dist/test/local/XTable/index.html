@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>XTable</title>
+    <!--包含meta信息以及公共样式引入-->
+    <meta charset="UTF-8">
+
+<!--可以提升IE的体验,比如IE8,即使有!Doctype,JSON.parse也不能使用;chrome=1是在电脑有chrome Frame的情况下,会调用chrome的技术无缝对页面进行渲染-->
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="CPP任职资格管理系统">
+<meta name="description" content="CPP任职资格管理系统">
+
+<!--如果不加ignore,会被loader收集并置后于require进来的css-->
+<link rel="stylesheet" type="text/css" href="/static/static/css/base_187cc63.css">
+
+    <link rel="stylesheet" type="text/css" href="/static/pkg/test/local/XTable/index.html_aio_ccb7b0d.css" />
+</head>
+<body>
+<div class="g-mn" style="width:600px;margin: 100px;">
+
+</div>
+<script src="/static/pkg/test/local/XTable/index.html_aio_1f44474.js"></script>
+<script>
+    require(['component/BaseComponent/index','component/ZXTable/index'], function (BaseComponent) {
+        var App = BaseComponent.extend({
+            template:"<z-xtable ref=\"zxtable\" config={config}>\n    <xtable_cols>\n        <col width=\"10%\"/>\n        <col width=\"20%\"/>\n        <col />\n    </xtable_cols>\n    <xtable_hd>\n        <tr>\n            <th>工号</th>\n            <th>姓名</th>\n            <th>职位名称</th>\n        </tr>\n    </xtable_hd>\n    <xtable_bd>\n        {#list items as item}\n        <tr>\n            <td>工号</td>\n            <td>姓名</td>\n            <td>职位名称</td>\n        </tr>\n        {/list}\n    </xtable_bd>\n</z-xtable>",
+            init: function () {
+                console.log('Xtable')
+            }
+        })
+
+        var app = new App({
+            data:{
+                items:[1,2,3],
+                config:{
+                    status:'normal'
+                }
+            }
+        }).$inject('.g-mn');
+
+        setTimeout(function () {
+            console.log('test')
+            debugger;
+            app.$update('config.status',{code:'400',msg:'test',type:'error'})
+        },2000)
+    })
+</script>
+</body>
+</html>
