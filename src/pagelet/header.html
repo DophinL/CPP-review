@@ -1,0 +1,12 @@
+<style>
+    .g-hd{
+
+    }
+</style>
+<div class="g-hd"></div>
+<script>
+//    注意如果省略index将无法生成config
+    require(['/component/Header/index'],function(Header){
+        new Header().$inject('.g-hd');
+    })
+</script>

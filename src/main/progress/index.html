@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>进度查询</title>
+
+    <!--包含meta信息以及公共样式引入-->
+    <link rel="import" href="/pagelet/index.html?__inline">
+    <style>
+        .g-mn{
+            padding:100px 30px 60px 210px;
+        }
+    </style>
+
+</head>
+<body>
+
+<link rel="import" href="/pagelet/header.html?__inline">
+<div class="g-bd">
+    <link rel="import" href="/pagelet/sidebar.html?__inline">
+    <div class="g-mn">
+
+    </div>
+</div>
+
+<script src="/static/js/require.js"></script>
+<!--data-framework是为了提高该脚本的优先级,去掉后会排到其它依赖的脚本后面(并不希望这样),详情见https://github.com/fex-team/fis3-postpackager-loader-->
+<script data-framework src="/static/js/require-config.js"></script>
+
+<script>
+    require(['./component/index/app.js'], function (App) {
+        var app = new App;
+        app.$inject('.g-mn');
+    })
+</script>
+</body>
+</html>

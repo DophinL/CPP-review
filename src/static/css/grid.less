@@ -1,0 +1,141 @@
+/**
+ * 栅栏布局 http://dwz.cn/11sixj
+ * 布局宽度 1180px
+ * 列宽度 30px
+ * 列数 24
+ * 间隙 20px
+ *
+ * 参考：
+ * https://g.alicdn.com/shop/??wangpu/1.1.0/layout/layout.css
+ * http://bbs.blueidea.com/thread-2926561-1-1.html
+ */
+
+.clearfix(@placeholder: null) {
+    *zoom: 1;
+
+    &:after {
+        content: '';
+        display: table;
+        height: 0;
+        clear: both;
+    }
+}
+
+html {
+      min-width: 1280px;
+      min-height: 680px;
+      overflow-x: auto;
+      overflow-y: auto;
+
+  }
+.g-layout {
+    
+}
+.g-wrap{
+    position: relative;
+    .clearfix();
+}
+.g-sd{
+    position: fixed;
+    top: 70px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    width: 180px;
+    background: #292929;
+
+}
+.g-frame-layout {
+    .g-content-wrap{
+        margin-left: 0;
+        margin-top: 0;
+    }
+}
+.g-content-wrap{
+	position: relative;
+	z-index: 1;
+    margin: 70px 0 0 180px;
+}
+
+.g-content{
+    padding: 0 40px;
+}
+
+.g-footer {
+    position: absolute;
+    bottom: 0;
+    color: #888;
+    padding: 10px 0;
+    word-break: break-all;
+    font-size: 12px;
+    width: 180px;
+    text-align: center;
+}
+
+
+
+@column: 30px;
+@space: 20px;
+
+/* 两栏布局 */
+.generate-2-column(@i) when (@i >= 1) {
+    @num1: ((@column + @space) * @i);
+    @num2: ((@column * @i) + (@i - 1) * @space);
+
+    .g-s@{i}m0 {
+        .main-wrap {
+            margin-left: @num1;
+        }
+
+        .col-sub {
+            width: @num2;
+        }
+    }
+
+    .g-m0e@{i}{
+        .main-wrap {
+            margin-right: @num1;
+        }
+
+        .col-extra {
+            width: @num2;
+            margin-left: -@num2;
+        }
+    }
+    .generate-2-column((@i - 1));
+};
+
+/* 三栏布局 */
+.generate-3-column(@i, @j) {
+    @num1: ((@column + @space) * @i);
+    @num2: ((@column * @i) + (@i - 1) * @space);
+
+    @num3: ((@column + @space) * @j);
+    @num4: ((@column * @j) + (@j - 1) * @space);
+
+    .g-s@{i}m0e@{j} {
+        .main-wrap {
+            margin-left: @num1;
+            margin-right: @num3;
+        }
+
+        .col-sub {
+            width: @num2;
+        }
+
+        .col-extra {
+            width: @num4;
+            margin-left: -@num4;
+        }
+    }
+}
+
+/* 常见的两栏布局 */
+.generate-2-column(12);
+
+/* 常见的三栏布局 */
+.generate-3-column(5, 4);
+.generate-3-column(5, 5);
+.generate-3-column(6, 4);
+.generate-3-column(6, 5);

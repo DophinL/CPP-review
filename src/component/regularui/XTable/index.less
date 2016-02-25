@@ -1,0 +1,46 @@
+//@require: u-table.less
+
+.scrollTable_hd{
+  position: relative;
+  &.overflow{
+    &:before{
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 0;
+      height: 36px;
+      border-right: 1px solid #e6e6e6;
+      border-top: 1px solid #e6e6e6;
+      border-bottom: 1px solid #e6e6e6;
+      background: rgb(248, 248, 248);
+    }
+    .u-table{
+      th{
+        &.th-last{
+          border-right: 1px solid transparent;
+        }
+      }
+    }
+  }
+  .u-table{
+    border-right: 0;
+  }
+}
+
+.scrollTable_bd{
+  overflow-y: visible;
+  &.overflow{
+    overflow-y: auto;
+  }
+  .u-table{
+    border-top: 0;
+    tr:first-child{
+      td{
+        border-top: 0;
+      }
+    }
+  }
+}

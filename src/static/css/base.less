@@ -1,0 +1,58 @@
+@import "normalize.less";
+@import "grid.less";
+@import "u-button.less";
+@import "u-tab.less";
+@import "u-table.less";
+@import "u-form.less";
+@import "u-crumbNav.less";
+@import "u-datepicker.less";
+@import "u-icons.less";
+@import "util.less";
+
+::selection {
+    color: #fff;
+    background: #E57C81;
+}
+
+html,body,h1,h2,h3,h4,h5,h6,div,dl,dt,dd,ul,ol,li,p,blockquote,pre,hr,figure,table,caption,th,td,form,fieldset,legend,button,menu{
+    margin:0;
+    padding:0;
+    outline:none;
+}
+html {
+    font: 14px/1.5  arial, "microsoft yahei", simsun, sans-serif;
+    color: #333333;
+    background: #ffffff;
+}
+
+body {
+}
+
+input, button, textarea {
+    vertical-align: middle;
+
+    &:focus {
+        outline: 0 none;
+    }
+}
+
+textarea {
+    resize: none;
+}
+
+ol, ul {
+    margin: 0;
+    padding: 0;
+    list-style: none outside;
+}
+
+
+/* 与应用相关 */
+a {
+    
+    text-decoration: none;
+    color: #357ebd;
+    &:hover {
+        text-decoration: underline;
+    }
+}

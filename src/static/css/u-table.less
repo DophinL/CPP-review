@@ -1,0 +1,107 @@
+.u-table-wrap{
+	margin-top: 0;
+}
+.u-table{
+	width: 100%;
+	text-align: center;
+	border: 1px solid #e6e6e6;
+	font-size: 12px;
+	th{
+		background: #f8f8f8;
+		
+		padding: 0px 2px;
+		line-height: 34px;
+		color: #595959;
+		border: 1px solid #e6e6e6;
+		font-weight: bold;
+	}
+	td{
+		padding: 8px 2px;
+		border-right: 1px dashed #e6e6e6;
+		border-bottom: 1px solid #e6e6e6;
+		.u-btn:nth-child(2){
+			margin-left: 10px;
+		}
+	}
+	tr{
+		&:nth-child(even){
+			td{
+				background: #fcfcfc;
+			}
+		}
+		&.heightLine{
+			border: 1px solid #d8eafb;
+			td {
+				background: #d8eafb;
+				
+			}
+			
+		}
+	}
+	a{
+		text-decoration: underline;
+		color: #357ebd;
+	}
+	.reasonPopoverWrap{
+		position: relative; 
+		display: inline-block;
+		.m-popover{
+			width: 130px;
+		}
+		.popover_cnt{
+		   min-height: 50px;
+		}
+	}
+	.table-action{
+		a:nth-child(2){
+			margin-left: 5px;
+		}
+	}
+}
+.u-scrollHead {
+	background: #f8f8f8;
+	&.j-showScroll{
+		padding-right: 19px;
+		position: relative;
+		&:before{
+			content: "";
+			position: absolute;
+			width: 17px;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			border-top: 1px solid #e6e6e6;
+			border-right: 1px solid #e6e6e6;
+			border-bottom: 1px solid #e6e6e6;
+		}
+		.u-table{
+			border-bottom: 1px solid #e6e6e6;
+			th:last-child{
+				border-right: none;
+			}
+		}
+	}
+	.u-table{
+		border: none;
+		th{
+			border-bottom: none;
+			border-right: none;
+			&:last-child{
+				border-right: 1px solid #e6e6e6;
+			}
+		}
+	}
+	
+}
+.f-showScrool {
+	height: 220px;
+	overflow-y: auto;
+	border-right: 1px solid #e6e6e6;
+	border-bottom: 1px solid #e6e6e6;
+	.u-table{
+		border-top: none;
+		border-bottom: none;
+	}
+}
+
+

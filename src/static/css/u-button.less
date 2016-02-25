@@ -1,0 +1,120 @@
+.u-btn {
+    display: inline-block;
+    height: 28px;
+	line-height: 28px;
+    padding: 0 15px;
+    color: #ffffff;
+    outline: 0 none;
+    text-align: center;
+    text-decoration: none;
+    letter-spacing: 1px;
+    
+    vertical-align: middle;
+    background:#db242f; 
+    background: linear-gradient(#e13a1a, #cc222c);
+
+    border-radius: 4px;
+    cursor: pointer;
+    border: 1px solid #b2161d;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, .3);
+
+    &:hover {
+        background: linear-gradient(rgb(242,62,28), rgb(220,37,47));
+    }
+
+    &:active {
+        color: rgb( 135, 24, 27 );
+        background: linear-gradient(rgb(218,50,32), rgb(204,34,44));
+        text-shadow: 0px 1px 0px rgba(255, 255, 255, .3);
+        box-shadow: 0px 1px 2px rgba(0, 0, 0, .3) inset;
+    }
+
+    &.gray,
+    &.btn-gray {
+        color: #4c4c4c;
+        background: #f2f2f2;
+        border-color: #cecece;
+    }
+
+    &.blue{
+        color: #fff ;
+        background-color: #428bca;
+        background: linear-gradient(#428bca, #428bca);
+        border-color: #357ebd !important;
+        &.bordered{
+            color: #357ebd; 
+            &:hover{
+                background: #357ebd;
+            }
+        }
+
+    }
+
+    &.white{
+        border-color: rgb( 204, 204, 204 );
+        background: linear-gradient(rgb(252,252,252), rgb(239,239,240) );
+        color: rgb( 50, 50, 50 ); 
+        &:hover{
+            background: linear-gradient(rgb(255,255,255), rgb(250,250,250) );
+        }
+        &:active{
+            color: rgb( 76, 76, 76 );
+            background: linear-gradient(rgb(231,231,231), rgb(221,221,221));
+            text-shadow: 0px 1px 0px rgba( 255, 255, 255, .3);
+            box-shadow: 0px 1px 2px rgba(0, 0, 0, .3) inset;
+        }
+    }
+
+    &.disabled {
+        cursor: not-allowed;
+        color: #CCCCCC !important;
+        border-color: #CCCCCC !important;
+        background: #eeeeee !important;
+        box-shadow: 0 2px 0 rgba(0, 0, 0, .25) !important;
+    }
+    &:disabled{
+        /*与上面的分开写，因为ie9以下不支持:disabled，如果合起来写会导致.disabled样式失效*/
+        cursor: not-allowed;
+        color: #CCCCCC !important;
+        border-color: #CCCCCC !important;
+        background: #eeeeee !important;
+        box-shadow: 0 2px 0 rgba(0, 0, 0, .25) !important;
+    }
+
+    &.small {
+        font-size: 12px;
+        padding: 0 5px;
+        height: 20px;
+		line-height: 20px;
+        border: none;
+        text-indent: 2px;
+    }
+    &.bordered {
+        color: #c22830;
+        font-weight: 400;
+        box-shadow: none;
+        background: #ffffff;
+        border: 1px solid #c22830;
+
+        &:hover {
+            color: #ffffff;
+            background: #c22830;
+        }
+
+        &.gray {
+            color: #808080;
+            background: #ffffff;
+            border: 1px solid #808080;
+
+            &:hover {
+                color: #ffffff;
+                background: #808080;
+            }
+        }
+
+        &.disabled,
+        &:disabled {
+            box-shadow: none !important;
+        }
+    }
+}

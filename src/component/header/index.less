@@ -1,0 +1,58 @@
+.m-header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    height: 70px;
+    .u-logo-wrap{
+		width: 180px;
+		float: left;
+		background-color: #cc222c;
+		height: 100%;
+        color: #fff;
+        font-size: 14px;
+        text-align: center;
+
+        &:after {
+            content: '';
+            display: inline-block;
+            width: 0;
+            height: 100%;
+            vertical-align: middle;
+        }
+
+        > span {
+            display: inline-block;
+            vertical-align: middle;
+        }
+	}
+    .i-logo{
+        background: url(images/logo.png) no-repeat;
+        display: inline-block;
+        width: 65px;
+        height: 40px;
+        line-height: 70px;
+        vertical-align: middle;
+        margin-left: -10px;
+    }
+    .account-sign-status{
+        height: 100%;
+        text-align: right;
+        box-shadow: 0 0px 5px rgba(0, 0, 0, .2);
+        overflow: hidden;
+        padding: 0 40px;
+        line-height: 70px;
+        background-color: #fdfdfd;
+        border-bottom: 1px solid #ccc;
+        color: #9a9a9a;
+        font-weight: bold;
+
+    }
+    .logout{
+        color: #9a9a9a;
+        font-weight: bold;
+        margin-left: 10px;
+        text-decoration: underline;
+    }
+}

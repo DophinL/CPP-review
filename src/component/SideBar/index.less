@@ -1,0 +1,116 @@
+@munuColor: #95a0aa;
+.u-menu{
+	font-size: 15px;
+	color: @munuColor;
+	.menuTab{
+		border-bottom: 1px solid #3b3b43;
+		
+		a{
+			color: inherit;
+			display: block;
+			padding: 8px 52px;
+			text-decoration: none;
+		}
+		.bg(){
+			display: inline-block;
+			width: 30px;
+			height: 30px;
+			line-height: 1;
+			vertical-align: middle;
+			background: url("images/icons.png") no-repeat 999px 999px;
+			margin-left: -30px;
+		}
+		.i-capacity{
+			.bg();
+			background-position: -9px -1px;
+		}
+		.i-todo{
+			.bg();
+			background-position: -36px -1px;
+		}
+		.i-progress{
+			.bg();
+			background-position: -66px -1px;
+		}
+		.i-center{
+			.bg();
+			background-position: -96px -1px;
+		}
+		.i-permission{
+			.bg();
+			background-position: -126px -1px
+		}
+		&.selected{
+			>a{
+				color: #cc222c;
+			}
+			
+			.i-capacity{
+				background-position: -6px -31px;
+			}
+			.i-todo{
+				background-position: -36px -31px;
+			}
+			.i-progress{
+				background-position: -66px -31px;
+			}
+			.i-center{
+				background-position: -96px -31px;
+			}
+			.i-permission{
+				background-position: -126px -31px;
+			}
+		}
+
+	}
+	.u-submenu {
+		font-size: 14px;
+		background: #242424;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		border-top: 1px solid #3b3b43;
+		.submenu{
+			padding-left: 25px;
+			padding-top: 2px;
+			padding-bottom: 2px;
+			margin: 6px 0 6px 42px; 
+			a{
+				padding: 0;
+			}
+		}
+		.selected{
+			background: #cc222c;
+			border-top-left-radius: 60px;
+			border-bottom-left-radius: 60px;
+			margin-right: -5px;
+			position: relative;
+			&::before{
+				content: "";
+				position: absolute;
+				display: inline-block;
+				border-style: solid;
+				border-width: 5px;
+				border-top-color: #840002;
+				border-right-color: transparent;
+				border-left-width: 0;
+				border-bottom-width: 0;
+				right: 0;
+				bottom: -5px;
+			}
+			a{
+				color: #fff;
+			}
+		}
+	}
+}
+
+.m-cprt {
+	position: absolute;
+	bottom: 0;
+	color: #888;
+	padding: 10px 0;
+	word-break: break-all;
+	font-size: 12px;
+	width: 180px;
+	text-align: center;
+}

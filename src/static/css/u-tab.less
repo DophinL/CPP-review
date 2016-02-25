@@ -1,0 +1,138 @@
+.u-main-tab{
+	background:#f5f5f5;
+	border: 1px solid #e0e0e0;
+	border-left: none;
+	border-right: none;
+	margin-top: -1px;
+	.tabList{
+		overflow:  hidden;
+		.item {
+			float: left;
+			background: #fbfbfb;
+			border-right: 1px solid #e0e0e0;
+			font-size: 16px;
+			color: #808080;
+			cursor: pointer;
+
+			&:hover {
+				a {
+					color: #cc222c;
+				}
+			}
+
+			&.selected{
+				a{
+                    background: #cc222c;
+					color: #fff;
+				}
+			}
+		}
+
+        a{
+            display: block;
+            padding: 0 50px;
+            line-height: 40px;
+            text-decoration: none !important;
+            color: inherit;
+        }
+	}
+}
+
+.u-sub-tab{
+	border-bottom: 1px solid #f2f2f2;
+	.tabList{
+	}
+	.item{
+		float: left;
+		padding: 16px 25px 12px;
+		color: #999999;
+		font-size: 16px;
+		&.selected{
+			border-bottom: 2px solid #cc222c;
+			position: relative;
+			font-weight: bold;
+			&::before{
+				content: "";
+				display: inline-block;
+				border-width: 6px;
+				border-style: solid;
+				border-color: transparent transparent #cc222c transparent;
+				position: absolute;
+				bottom: 0;
+				left: 50%;
+				margin-left: -3px;
+
+			}
+			a{
+				color: #cc222c;
+			}
+			
+		}
+	}
+	a{
+		text-decoration: none;
+		color: inherit;
+		&:hover{
+			text-decoration: none;
+		}
+	}
+}
+
+.u-tab-filter{
+    margin: 10px 0;
+	border-bottom: 1px solid #e5e5e5;
+	strong,
+    .strong{
+		font-weight: normal;
+		padding-left: 5px;
+	}
+	.tabFilter{
+        position: relative;
+        top: 1px;
+        padding-top: 1px;
+		overflow: hidden;
+	}
+	.filter{
+		float: left;
+        margin-right: -1px;
+
+        &:first-child {
+            a {
+                margin-left: 1px;
+                border-left: 0 none;
+            }
+        }
+
+        a {
+            display: block;
+            margin: 5px 0;
+            padding: 0 25px;
+            color: #808080;
+            white-space: nowrap;
+            text-decoration: none;
+            background: #ffffff;
+            border-left: 1px solid #e5e5e5;
+            border-right: 1px solid #e5e5e5;
+        }
+
+        &.selected {
+            &:first-child {
+                a {
+                    margin-left: 0;
+                    border-left: 1px solid #e5e5e5;
+                }
+            }
+
+            a {
+                margin: -1px 0 0;
+                padding: 5px 25px;
+                color: #292929;
+                border-top: 1px solid #e5e5e5;
+            }
+            strong,
+            .strong {
+                color: #cc222c;
+            }
+        }
+	}
+}

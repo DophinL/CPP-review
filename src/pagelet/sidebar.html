@@ -1,0 +1,12 @@
+<style>
+    .g-sd{
+
+    }
+</style>
+<div class="g-sd"></div>
+<script>
+    //    注意如果省略index将无法生成config
+    require(['/component/SideBar/index'],function(SideBar){
+        new SideBar().$inject('.g-sd');
+    })
+</script>

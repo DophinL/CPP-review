@@ -1,0 +1,163 @@
+textarea,
+input[type="text"],
+input[type="email"],
+input[type="phone"],
+input[type="number"],
+input[type="password"]{
+    width: 160px;
+    
+    padding: 7px 5px;
+    font-size: 12px;
+    border-radius: 3px;
+    background: #ffffff;
+    border: 1px solid #e3e3e3;
+    box-sizing: border-box;
+
+    &:hover {
+        border-color: #bbbbbb;
+    }
+
+    &:focus {
+        border-color: #bbbbbb;
+        box-shadow: 0 0 2px rgba(0, 0, 0, .2);
+    }
+
+    &.disabled,
+    &:disabled {
+        color: #aaaaaa !important;
+        cursor: not-allowed;
+        background: #efefef !important;
+        border-color: #e3e3e3 !important;
+        text-shadow: 1px 1px 0 #fff;
+    }
+
+    &.readonly{
+        background: #eeeeee;
+    }
+
+    /* 在火狐下，为什么一定要 .readyonly 与 :read-only 将两者分开？ */
+    &:read-only {
+        background: #eeeeee;
+    }
+
+    &.error {
+        color: #c22830;
+        border-color: #c22830 !important;
+
+        &:focus {
+            box-shadow: 0 0 2px rgba(194, 40, 48, .5);
+        }
+    }
+
+    &.block {
+        width: 100%;
+    }
+}
+
+textarea {
+    width: auto;
+    height: auto;
+    line-height: 1.5;
+    padding: 5px;
+}
+
+select {
+    width: 170px;
+    height: 30px;
+	line-height: 30px;
+    padding: 5px;
+    font-size: 12px;
+    border-radius: 3px;
+    background: #ffffff;
+    border: 1px solid #e3e3e3;
+    box-sizing: border-box;
+
+    &:hover {
+        border-color: #bbbbbb;
+    }
+
+    &.error {
+        border-color: #c22830 !important;
+    }
+
+    &.disabled,
+    &:disabled {
+        color: #aaaaaa !important;
+        cursor: not-allowed;
+        background: #efefef !important;
+        border-color: #e3e3e3 !important;
+    }
+
+}
+
+.u-form {
+    font-size: 14px;
+    line-height: 1.5;
+    .split-line {
+        margin: 25px;
+        border: 0 none;
+        border-top: 1px solid #e6e6e6;
+    }
+    .field-tips {
+        margin-top: 5px;
+        font-size: 12px;
+        color: #cccccc;
+    }
+    
+    .field-row {
+        position: relative;
+        margin-bottom: 20px;
+
+        .field-hd {
+            float: left;
+            width: 130px;
+            margin-top: 5px;
+            text-align: right;
+        }
+
+        .field-bd {
+            min-height: 21px;
+            padding: 2px; /* 为了输入框的阴影 */
+            overflow: hidden;
+            *zoom: 1;
+        }
+    }
+    .err-msg {
+        position: absolute;
+        width: 100px;
+        margin: 5px 0 0 10px;
+        color: #df4952;
+
+        &:before {
+            content: '';
+            display: inline-block;
+            width: 19px;
+            height: 19px;
+            margin-right: 5px;
+            vertical-align: -4px;
+            background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAATCAYAAAByUDbMAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyFpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDE0IDc5LjE1MTQ4MSwgMjAxMy8wMy8xMy0xMjowOToxNSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChXaW5kb3dzKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpGREI2ODJGMzU1RUUxMUU1ODNEMDk1MjMyQTZBOTI2MCIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpGREI2ODJGNDU1RUUxMUU1ODNEMDk1MjMyQTZBOTI2MCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZEQjY4MkYxNTVFRTExRTU4M0QwOTUyMzJBNkE5MjYwIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkZEQjY4MkYyNTVFRTExRTU4M0QwOTUyMzJBNkE5MjYwIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+v55NrAAAAYtJREFUeNqMlDtIA0EQhicxPtIEn20UFaxTWWipiE+CVRBSmFpQKwtrQSshaClWgo0ghhQSVAQtUlmLmERFm0TRoCGnifEfswd35+2uAx8Ld/983O3drCc7Pksu1Q0iYAL0g05QALcgCfbBnbPJ45D5wRpYAI0kry+wDVZBybzotQS6wCVY1ohI3F8CF6LPJmsCCRBydrVGIxQ82KO2WNRNGhJ9zVbZBhh0SwfCU+T1t1BgZlL2lNy3bsqCYo9cy9Pgq69Nyjfn/h6WxYBPlqoZhm2VFPfPs2xElfoul+uySlXzTWiUZb1KWalkWxU1wLIOVaKaL9TXwrNO1s4yZcq4yfyun9mcTvbCsowq8XF6TtXXN3pPnelk1/wVTsCQdG4en+hhLkb/qBQ/2Q6oyBKaCTCL+3dZdg+2ZKlAeFo3ASSGPmeO0wpIu6WKhwmqlQ0qHiVlorTotx1BPP3HbsOuqCswBvLOI4gvDIO4ag8texQX+bx1pqzFv/ki2BQnLW9Un+Sk/fPj/QgwABw1bN2fUCQeAAAAAElFTkSuQmCC");
+        }
+    }
+}
+@red-color:#c22830;
+.u-required {
+    color: @red-color;
+    margin: 0 3px;
+}
+
+.u-errMsg{
+    color: @red-color;
+}
+.u-errInput{
+    border: 1px solid @red-color;
+}
+.u-strong{
+    color: @red-color;
+    padding: 0 5px;
+}
+
+.u-notice{
+    line-height:200px;
+    font-size:24px;
+    text-align:center;
+}

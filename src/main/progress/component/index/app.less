@@ -1,0 +1,333 @@
+@border-gray: #e4e4e4;
+@background-gray:#f9f9f9;
+@topic-color:#db242f;//#db242f
+
+.hyphen(@width:10px,@color:#cbcbcb) {
+  display: inline-block;
+  width: @width;
+  border-top: 1px solid @color;
+  margin:0 8px;
+  vertical-align: middle;
+}
+
+.emphasis(@color:red){
+  &:before{
+    content: '* ';
+    color:@color;
+  }
+}
+
+.clearfix{
+  zoom: 1;
+  &:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+.thead{
+  position: relative;
+  &.overflow{
+    padding-right: 17px;
+    &:before{
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 17px;
+      height: 35px;
+      border-right: 1px solid #e6e6e6;
+      border-top: 1px solid #e6e6e6;
+      background: rgb(248, 248, 248);
+    }
+    .u-table{
+      th{
+        &.last{
+          border-right: 1px solid transparent;
+        }
+      }
+    }
+  }
+  .u-table{
+    margin-top: 20px;
+    border-right: 0;
+  }
+}
+
+.tbody{
+  max-height: 500px;
+  &.overflow{
+    overflow-y: auto;
+  }
+  .u-table{
+    border-top: 0;
+    tr:first-child{
+      td{
+        border-top: 0;
+      }
+    }
+  }
+}
+
+.scrollTable_hd {
+  margin-top: 20px;
+}
+
+.m-tab {
+  @font: '14px/1.5  arial, "microsoft yahei", simsun, sans-serif';
+  @background-color:white;
+  position: relative;
+  width: 1000px;
+  font: @font;
+  margin: 20px 0;
+  .tab_hd {
+    position: relative;
+    top: 1px;
+    left: 0;
+    padding: 0; /* 清除样式 */
+    font-size: 0;
+    &>li {
+      display: inline-block;
+      width: 180px;
+      height: 40px;
+      border: 1px solid @border-gray;
+      border-left: 0;
+      line-height: 40px;
+      text-align: center;
+      font-size: 14px;
+      background-color: @background-gray;
+      &:first-child {
+        border-left: 1px solid @border-gray;
+      }
+      &.z-selected {
+        border-bottom: 1px solid @background-color;
+        background-color: @background-color;
+        a {
+          color: @topic-color !important;
+        }
+      }
+      &:hover {
+        a {
+          color: @topic-color !important;
+        }
+        background-color: @background-color;
+      }
+      a {
+        display: block;
+        color: #9F9F9F;
+        text-decoration: none;
+      }
+    }
+  }
+  .tab_bd {
+    border: 1px solid @border-gray;
+    padding: 20px 20px 40px;
+    background-color: white;
+    word-break: break-all;
+  }
+}
+
+
+.m-tab{
+  .tab_bd{
+    padding: 20px 40px;
+  }
+  h3 {
+    margin-left: 10px;
+    margin-top: 20px;
+    border-left: 2px solid @topic-color;
+    padding-left: 8px;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1;
+    &:first-child{
+      margin-top: 0;
+    }
+  }
+  .bd{
+    border-top: 1px solid @border-gray;
+    padding-top: 10px;
+    margin-top: 15px;
+    &.normal{
+      &>li{
+        position: relative;
+        margin-bottom: 10px;
+        .right{
+          width: 500px;
+          position: absolute;
+          left: 400px;
+          top: 0;
+        }
+        .key{
+          display: inline-block;
+          width: 120px;
+          text-align: right;
+          font-size: 14px;
+          margin-right: 20px;
+          vertical-align: middle;
+          &+.text{
+            vertical-align: middle;
+          }
+        }
+      }
+    }
+    &.workExp,&.projectExp {
+      padding-top: 20px;
+      padding-left: 220px;
+      &>li{
+        position: relative;
+        width: 500px;
+        border-left: 1px solid @border-gray;
+        padding: 25px 0 25px 25px;
+        &:before{
+          content:'';
+          position: absolute;
+          left: -4.5px;
+          top: 0;
+          width: 8px;
+          height: 8px;
+          border-radius: 50%;
+          background-color: @topic-color;
+        }
+        &:last-child{
+          border-left: 0;
+        }
+        .text{
+          font-size: 14px;
+          margin-bottom: 10px;
+          word-break: break-all;
+          &.text-em{
+            position: absolute;
+            top: -7px;
+            font-size: 15px;
+            font-weight: 700;
+          }
+        }
+        .time{
+          position: absolute;
+          left: -160px;
+          top: -6px;
+          font-size: 12px;
+        }
+      }
+    }
+    &.appendix{
+      .appendix-wrap{
+        margin-bottom: 15px;
+        margin-left: 15px;
+        > label{
+          font-size: 15px;
+          margin-left: 10px;
+        }
+        .m-upload{
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+  .table{
+    table-layout: fixed;
+    width: 500px;
+    border: 1px solid @border-gray;
+    margin-left: 40px;
+    word-break: break-all;
+    td,th{
+      box-sizing: border-box;
+      border: 1px solid @border-gray;
+      text-align: center;
+    }
+    td{
+      padding: 10px;
+    }
+    .hd{
+      background-color: @background-gray;
+      .th{
+        height: 35px;
+      }
+      .th-1{
+        width: 240px;
+      }
+      .th-2{
+        width: 440px;
+      }
+      .th-3{
+        width: 120px;
+      }
+    }
+    .text{
+      vertical-align: middle;
+    }
+    .m-icon{
+      vertical-align: middle;
+      .icon-wenhao{
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+.m-icon{
+  position: relative;
+  .icon{
+    display: inline-block;
+    font-size: 14px;
+    color: #db242f;
+    vertical-align: middle;
+    &+.icon_text{
+      margin-left: 8px;
+    }
+  }
+  .icon_text{
+    font-size: 14px;
+    vertical-align: middle;
+  }
+  &.m-icon-warning{
+    .icon{
+      .icon(@color:red){
+        color: @color;
+      }
+      .icon(@topic-color);
+    }
+    .icon_text{
+      color:@topic-color;
+    }
+  }
+  &.m-icon-trigger{
+    cursor: pointer;
+    &:hover{
+      .icon_text{
+        //text-decoration: underline;
+        color: @topic-color;
+      }
+    }
+  }
+  &.m-icon-disabled{
+    .icon{
+      color:#B1B1B1;
+    }
+    .text{
+      color:#B1B1B1;
+    }
+  }
+}
+
+.u-crumbNav{
+  width: 990px;
+  &:before {
+    background-color: @topic-color !important;
+  }
+  .current{
+    color: @topic-color !important;
+  }
+}
+
+.keyword-param{
+  float: right !important;
+}
+
+.m-popover-s{
+  width: 100px !important;
+}

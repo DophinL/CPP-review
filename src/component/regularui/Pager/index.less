@@ -1,0 +1,60 @@
+@enable-color:#c22830;
+@disable-color: #ccc;
+.m-page{
+	margin:20px 0 20px 0;
+	text-align:center;
+	line-height:22px;
+	word-wrap:normal;
+	white-space:nowrap;
+	font-size: 12px;
+	a{
+		display:inline-block;
+		vertical-align:top;
+		padding:0 8px;
+		margin-left:-1px;
+		border:1px solid @enable-color;
+		color:@enable-color;
+		margin-right: 8px;
+	}
+	.nav{
+		display: inline-block;
+		border-width: 5px;
+		border-style: dashed solid dashed dashed;
+		border-color: transparent @enable-color transparent transparent;
+		top: 1px;	
+		left: -2px;
+		position: relative;
+		padding: 0;
+	}	
+	
+	.pagenxt{
+		border-style: dashed dashed dashed solid;
+		border-color: transparent transparent transparent @enable-color;
+		left: 2px;
+	}
+	.first{
+		margin-left:0;
+		border-top-left-radius:5px;
+		border-bottom-left-radius:5px;
+	}
+	.last{
+		margin-right:0;border-top-right-radius:5px;border-bottom-right-radius:5px;
+	}
+	.z-crt{
+		cursor:default;
+		color: #ffffff;
+		background:@enable-color;
+	}
+	.z-dis{
+		cursor:default;
+		color: @disable-color;
+		border-color: @disable-color;
+		.nav{
+			border-color: transparent @disable-color transparent transparent;
+		}
+		.pagenxt{
+			border-color: transparent transparent transparent @disable-color;
+		}
+	}
+
+}
