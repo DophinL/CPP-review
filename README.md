@@ -83,6 +83,7 @@ require.onError = function(err){
 
 ## 目录结构
 这是以前的目录结构：
+
 ![Alt text](http://7xokyg.com1.z0.glb.clouddn.com/cppreview-1.png)
 
 这是现在的目录结构：
@@ -145,7 +146,6 @@ pagelet即页面中一块独立的内容（可能包含逻辑、样式、结构�
 但有个问题是：这个文件是共用的，我配置了一些本地测试的重写，提交的时候会一同提交上去。我并不希望本地测试相关的内容出现在仓库中，但暂时还没有去寻找解决办法。`// TODO`
 
 ## 页面结构
----
 以前同事主要的写法是这样的：
 ```xml
 <!DOCTYPE html>
@@ -226,13 +226,11 @@ pagelet即页面中一块独立的内容（可能包含逻辑、样式、结构�
 还有，头部的`<style>`标签中的样式根据每个页面的情况来具体配置。
 
 ## HTML
----
 感觉HTML的理解停留在很基础的阶段：标签。
 
 `// TODO`
 
 ## CSS
----
 ### 结构
 该有哪些文件？比如说之前看一篇外文就提到：`mixin`,`global varible`可以和`业务样式`分开来。
 
@@ -284,7 +282,6 @@ pagelet即页面中一块独立的内容（可能包含逻辑、样式、结构�
 1. [NEC](http://nec.netease.com/)
 
 ## JS
----
 ### 结构
 模块加载器 + 基础类库 + 基于regular的业务组件 
 
@@ -303,7 +300,6 @@ pagelet即页面中一块独立的内容（可能包含逻辑、样式、结构�
 对于函数，不严格地采用了[JSDoc](http://usejsdoc.org/) `// TODO`
 
 ## 组件
----
 ### 规范
 所有业务组件都基于BaseComponent扩展，BaseComponent主要添加了$request方法用于发送、处理请求（即ajax），并扩展了Regular上的所有属性、方法（util、dom等）：
 ![Alt text](http://7xokyg.com1.z0.glb.clouddn.com/cppreview-12.png)
@@ -333,7 +329,6 @@ __inline('app.tpl')
 1. [雨森的PPT](http://rainfore.me/Shares/Regular%20UI%E5%BA%93%E7%9A%84%E8%AE%BE%E8%AE%A1%E4%B8%8E%E6%80%9D%E8%80%83/#/)
 
 ## 重构过程
----
 jQuery操作替换(dom、ajax等)
 
 业务组件中：`Regular` 替换为 `BaseComponent`
@@ -341,7 +336,6 @@ jQuery操作替换(dom、ajax等)
 路径替换（因为改了目录结构），比如css中引用图片的路径
 
 ## 总结
----
 CPP是我在网易实习时做的第一个项目，本来老早就说要总结、重构，结果拖了一个月，实在惭愧
 _(:з」∠)
 
@@ -355,7 +349,6 @@ _(:з」∠)
 `// TODO`
 
 ## 问题
----
 1. 生产环境出了问题的话，测试不方便
 2. 没有使用单元测试
 
